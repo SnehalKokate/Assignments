@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Armstrong {
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+		int arm=sc.nextInt();
+        int temp=arm;
+        int sum = 0;
+        
+        while(temp>0){
+            int dif=temp%10;
+            sum = sum+dif*dif*dif;
+            temp/=10;
+        }
+        
+        if(arm==sum){
+            System.out.println("Armstrong Number");
+        }
+        else{
+            System.out.println("Not Armstrong Number");
+        }
+	}
+
+}
